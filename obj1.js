@@ -26,6 +26,10 @@ function Dog(name, breed, weight) {
     this.showSpeed = function () {
         alert(this.speed);
     };
+    this.toString = function () {
+        // return this.name + "." + this.name + " " + this.breed + " " + this.weight;
+        return `${this.name} ${this.breed} ${this.weight}`
+    };
 }
 
 let fido = new Dog("Fido", "Mixed", 38);
@@ -35,9 +39,11 @@ let spot = new Dog("Spot", "Chihuahua", 10);
 let dogs = [fido, fluffy, spot];
 
 for (let i = 0; i < dogs.length; i++) {
-    alert(dogs[i].name);
+    alert(dogs[i]);
+    // alert(dogs[i].toString());
     dogs[i].bark();
     dogs[i].start();
     dogs[i].changeSpeed(2);
     dogs[i].showSpeed();
+    // alert(toString(dogs[i]));
 }
