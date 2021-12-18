@@ -21,7 +21,7 @@ function Dog(name, breed, weight) {
         this.speed = 0;
     }
     this.changeSpeed = function (amount) {
-        amount *= 2;
+        this.speed *= amount;
     };
     this.showSpeed = function () {
         alert(this.speed);
